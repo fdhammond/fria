@@ -1,0 +1,397 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+//Variables
+
+$base-color: #FFFFFF;
+$blue-color: #086AD8;
+$green-color: #10DCE8;
+
+//Typography
+
+//Catamaran Sans
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+$main-font: 'Catamaran', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+//Nav
+
+nav {    
+    margin: 20px 0 20px 0;    
+    ul {        
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 20px;
+        .logo {
+            flex: 1;
+        }
+        
+        li {
+            font-family: $secondary-font;
+            font-weight: 400;
+            margin: 0 20px;
+        }
+    .search {
+        margin: 0 95px 0 35px;
+    }
+    }
+}
+
+//Main
+
+main {    
+    .main-part {        
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;        
+        margin: 0 80px;
+        img {
+            position: relative;
+            width: 560px;
+            height: auto; 
+        }
+    .main-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h1 {
+            width: 75%;
+            font-family: $main-font;
+            font-weight: 700;
+            font-size: 70px;
+        }
+        p {
+            font-family: $secondary-font;
+            width: 70%;
+            margin: 25px 0;
+        }
+        .button-main {
+            display: flex;
+            justify-content: center;
+            align-content: center;            
+            .get-started {                
+                background-color: $blue-color;
+                font-size: 16px;                
+                border-radius: 2px;
+                padding: 14px 35px;
+                border: none;
+                font-family: $secondary-font;
+                a {
+                    text-decoration: none;
+                    color: $base-color;
+                }
+            }
+            .contact-us {
+                margin: 0 0 0 20px;
+                background-color: $green-color;
+                font-size: 16px;                
+                border-radius: 2px;
+                padding: 14px 35px;
+                border: none;
+                font-family: $secondary-font;
+                a {
+                    text-decoration: none;
+                    color: $base-color;
+                }
+            }
+        }
+    }
+    }
+}
+
+// Features
+
+.features {
+    .features-title {     
+        margin: 25px 0 0 0;
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            font-family: $main-font;
+            font-size: 50px;
+            font-weight: 700;
+        }
+    .features-paragraph {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        p {     
+            max-width: 750px;                     
+            font-family: $secondary-font;            
+            font-size: 16px;
+            text-align: center;
+          }
+        }
+    }
+}
+
+    .features-options {
+        margin: 55px 0 55px 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        i {
+            display: flex;
+            justify-content: center;            
+            font-size: 60px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-family: $main-font;
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            font-size: 16px;
+            font-family: $secondary-font;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .design {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 350px;
+        }
+        .choice {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 350px;
+        }
+        .quality {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 350px;
+        }
+        .time {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 350px;
+        }
+    }
+
+    //Researching
+
+    .researching {
+        margin-top: 90px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        .researching-text {
+            margin: 50px 25px 0 175px;
+            
+            h1 {
+                font-family: $main-font;
+                font-size: 36px;
+                font-weight: 700;
+                span {
+                    color: $blue-color;
+                }
+            }
+            p {
+                font-family: $secondary-font;
+                font-size: 16px;
+            }
+        }
+
+        .researching-stats {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin: 25px 0 0 0;
+            h3 {
+               font-family: $main-font;
+               font-size: 50px;
+               color: $blue-color; 
+            }
+            h4 {
+                font-family: $main-font;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            p {
+                font-family: $secondary-font;
+                font-size: 16px;
+            }
+        
+        .completed-project {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;    
+            margin-right: 20px;     
+        }
+    }
+        .play-button {                        
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin: 15% auto;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            a {
+                text-decoration: none;
+                background-color: $blue-color;
+                border-radius: 50%;                                
+                width: 100%;
+                height: auto;                
+            }
+            i {
+                display: flex;
+                justify-items: center;
+                align-content: center;
+                font-size: 25px;
+                color: white;
+                border-color: $base-color;
+                margin-top: 12px;
+                margin-left: 17px;
+            }
+        }
+
+        .researching-image {
+        margin-right: 15px;
+            img {
+                width: 700px;
+                height: auto;
+            }
+        }
+    }
+
+    section {
+    .services-background {
+        background-color: #F1F8FE;
+    }    
+    .services {
+        padding: 70px 0 70px 0;
+        margin: 0 50px 0 50px;
+        
+        //flex-wrap: wrap;
+        .services-title {                        
+            h1 {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                font-family: $main-font;
+                font-weight: 700;
+                font-size: 50px;
+            }
+            .services-paragraph {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                p {
+                    max-width: 750px;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;                
+                    font-size: 16px;
+                    font-family: $secondary-font;
+                    text-align: center;                                    
+                }
+            }
+        }
+        .services-details {
+            
+            h3 {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                font-family: $main-font;
+                font-weight: 700;
+                font-size: 50px;
+            }
+            p {
+                max-width: 750px;
+                display: flex;
+                justify-content: center;
+                align-content: center;                
+                font-size: 16px;
+                font-family: $secondary-font;
+                text-align: center;    
+                padding: 0 20px;  
+                margin: 0 40px;                              
+            }
+
+            span {
+                font-weight: bold;
+                margin: 12px 0 25px 0;
+            }
+
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            margin-top: 35px;
+            .service-icon {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+                background-color: $blue-color;
+                margin: 25px auto;                
+            }
+            .consultancy-icon {
+                background-color: #DEB0FE;                                
+            }
+            .web-icon {
+                background-color: #79E8E2;
+            }
+            .digital-icon {
+                background-color: #FCC774;
+            }
+            .app-icon {
+                background-color: #84B7FD;
+            }
+            .ecomerce-icon {
+                background-color: #FE929F;
+            }
+            .solutions-icon {
+                background-color: #2E1342;
+            }
+            i {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                font-size: 35px;
+                color: white;                
+            }
+            h3 {
+                font-family: $main-font;
+                font-weight: 700;
+                font-size: 24px;
+            }
+        .service-box {            
+            width: 450px;
+            margin: 12px 12px;
+            background-color: white;   
+            border-radius: 5%;         
+            }   
+        }
+    }   
+}
