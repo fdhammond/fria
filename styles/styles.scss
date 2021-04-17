@@ -21,7 +21,10 @@ $secondary-font: 'Open Sans', sans-serif;
 //Nav
 
 nav {    
-    margin: 20px 0 20px 0;    
+    margin: 0 0 20px 0;    
+    padding: 15px 0 15px 0;
+    background-color: #eef0f2;
+    
     ul {        
         list-style: none;
         display: flex;
@@ -38,6 +41,14 @@ nav {
             font-family: $secondary-font;
             font-weight: 400;
             margin: 0 20px;
+            a {
+                text-decoration: none;
+                color: black;
+                &:hover {
+                    color: $blue-color;
+                    font-weight: bold;
+                }
+            }
         }
     .search {
         margin: 0 95px 0 35px;
@@ -149,6 +160,7 @@ main {
             display: flex;
             justify-content: center;            
             font-size: 60px;
+            color: $green-color;
         }
 
         h3 {
@@ -354,7 +366,7 @@ main {
                 width: 70px;
                 height: 70px;
                 background-color: $blue-color;
-                margin: 25px auto;                
+                margin: 25px auto;                  
             }
             .consultancy-icon {
                 background-color: #DEB0FE;                                
@@ -389,8 +401,20 @@ main {
         .service-box {            
             width: 450px;
             margin: 12px 12px;
+            transition: background-color color 0.5s ease-in;
             background-color: white;   
-            border-radius: 5%;         
+            border-radius: 5%;     
+            &:hover {
+                background-color: $green-color;
+                color: white;
+                a {
+                    color: white;
+                }
+            }  
+            a {
+                text-decoration: none;
+                color: black;
+            }                     
             }   
         }
     }   
