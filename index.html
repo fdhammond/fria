@@ -12,29 +12,33 @@
     <header>
 
         <nav>
+            <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
             <ul>
                 <div class="logo">
                     <img src="https://templates.envytheme.com/fria/default/assets/img/logo.png" alt="">
-                </div>
-                <li>
+                </div>                
+                <li class="item">
                     <a href="#">Home</a>
                    </li>
-                <li>
+                <li class="item">
                     <a href="#">About</a>
                     </li>
-                <li>
+                <li class="item">
                     <a href="#">Services</a>
                     </li>
-                <li>
+                <li class="item">
                     <a href="#">Projects</a>
                     </li>
-                <li>
+                <li class="item">
                     <a href="#">Pages</a>
                     </li>
-                <li>
+                <li class="item">
                     <a href="#">Blog</a>
                     </li>
-                <li>
+                <li class="item">
                     <a href="#">Contact</a>
                     </li>
                 <div class="search">
@@ -226,5 +230,16 @@
     </div>
 </div>
 </section>
+<script>
+    let buttonSelected = document.querySelector('.checkbtn');
+    let list = document.querySelector('.item'); 
+
+    buttonSelected.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(list)
+        list.style.display = 'flex'
+        console.log('hello')
+    })
+</script>
 </body>
 </html>

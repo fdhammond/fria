@@ -24,6 +24,21 @@ nav {
     margin: 0 0 20px 0;    
     padding: 15px 0 15px 0;
     background-color: #eef0f2;
+
+    .checkbtn {
+        font-size: 3rem;
+        color: black;
+        float: right;
+        margin-top: 1.6rem;
+        margin-right: 1.6rem;
+        cursor: pointer;
+        display: none;
+      }
+  
+      #check {
+        display: none;
+      }
+    
     
     ul {        
         list-style: none;
@@ -34,7 +49,7 @@ nav {
         flex-wrap: wrap;
         margin: 0 20px;
         .logo {
-            flex: 1;
+            flex: 1;            
         }
         
         li {
@@ -418,4 +433,51 @@ main {
             }   
         }
     }   
+}
+
+//Media Queries
+
+// Phone
+/* Portrait */
+@media screen 
+  and (min-width: 320px) 
+  and (max-width: 480px) {
+
+    nav {       
+        .checkbtn {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-self: center;
+            margin-top: 15px;
+            i {
+                font-size: 22px;
+            }        
+        }        
+        ul {            
+            display: flex; 
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-self: center;  
+            flex-direction: column;
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-content: center;                                
+                img {
+                width: 100px;        
+                height: auto;
+                margin-right: 200%;
+                }        
+            }
+            .item {
+                display: none;
+            }
+            .search {
+                display: none;      
+                content: '';                                          
+            }
+        }              
+    }
+
 }
