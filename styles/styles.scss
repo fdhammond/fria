@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 //Variables
@@ -17,6 +18,20 @@ $green-color: #10DCE8;
 
 $main-font: 'Catamaran', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
+
+@mixin button {                
+                font-size: 16px;                
+                border-radius: 2px;
+                padding: 14px 35px;
+                border: none;
+                font-family: $secondary-font;  
+                width: 10em;
+                height: auto;              
+                a {
+                    text-decoration: none;
+                    color: $base-color;
+                }
+}
 
 //Nav
 
@@ -81,28 +96,30 @@ main {
         display: flex;
         justify-content: space-around;
         align-content: center;
-        align-items: center;        
+        align-items: center;            
         margin: 0 80px;
         img {
             position: relative;
             width: 560px;
             height: auto; 
+            z-index: -100;
         }
     .main-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        h1 {
-            width: 75%;
+        width: 100%;
+        h1 {            
             font-family: $main-font;
             font-weight: 700;
-            font-size: 70px;
+            font-size: calc(10px + 5vw);
         }
-        p {
+        p {            
             font-family: $secondary-font;
-            width: 70%;
-            margin: 25px 0;
+            font-size: calc(14px + .5vw);
+            line-height: 1.8;            
+            margin: 25px 25px 25px 0;
         }
         .button-main {
             display: flex;
@@ -110,28 +127,12 @@ main {
             align-content: center;            
             .get-started {                
                 background-color: $blue-color;
-                font-size: 16px;                
-                border-radius: 2px;
-                padding: 14px 35px;
-                border: none;
-                font-family: $secondary-font;
-                a {
-                    text-decoration: none;
-                    color: $base-color;
-                }
+                @include button;
             }
             .contact-us {
                 margin: 0 0 0 20px;
                 background-color: $green-color;
-                font-size: 16px;                
-                border-radius: 2px;
-                padding: 14px 35px;
-                border: none;
-                font-family: $secondary-font;
-                a {
-                    text-decoration: none;
-                    color: $base-color;
-                }
+                @include button;
             }
         }
     }
@@ -443,12 +444,14 @@ main {
 // Phone
 /* Portrait */
 @media screen 
-  and (min-width: 320px) 
-  and (max-width: 480px) {
+  //and (min-width: 320px) 
+  and (max-width: 767px) 
+  {
 
     nav {  
         padding-bottom: 0;       
         margin-bottom: 0;
+        
         .checkbtn {
             display: flex;
             justify-content: center;
@@ -510,6 +513,45 @@ main {
                 transition-duration: .8s;
             }
         }         
+    }
+
+    //Main text
+    .main-part {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;            
+        .main-text {  
+            margin: 25px 12px 12px 12px;                              
+            text-align: center;                                                                                       
+        }
+        img {
+           margin: 0;
+           max-width: 420px;
+           max-height: auto;
+        }
+    }
+
+    //Features
+    .features {
+        .features-title {
+            h1 {
+                font-size: 45px;
+            }
+        .features-paragraph {
+            p {
+                margin: 14px 45px 0 45px;
+            }
+        }            
+        }
+        .features-options {
+            h3 {
+                margin: 14px 0;
+            }
+            .icon-space {
+                margin: 28px 0 0 0;
+            }
+        }
     }
 
 }
