@@ -75,6 +75,27 @@ nav ul .search {
   margin: 0 95px 0 35px;
 }
 
+.button-up {
+  scroll-behavior: smooth;
+  position: fixed;
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  left: 90%;
+  bottom: 5%;
+  color: black;
+}
+
+.button-up i {
+  border: 2px solid #10DCE8;
+  border-radius: 50%;
+  padding: 12px 12px;
+  text-align: center;
+}
+
 main .main-part {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -653,10 +674,11 @@ section .services .services-details .service-box a {
   }
   nav #check:checked ~ ul {
     display: block;
-    background-color: greenyellow;
+    background-color: #10DCE8;
     top: 0;
-    padding: 0 0 25px 0;
-    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
   }
   nav #check:checked ~ ul .item:first-child {
     padding-top: 2rem;
@@ -664,11 +686,21 @@ section .services .services-details .service-box a {
   }
   nav #check:checked ~ ul li {
     display: block;
-    margin: 2rem 5rem 0 8rem;
+    margin: 2rem 5rem 0 5rem;
+  }
+  nav #check:checked ~ ul li a {
+    color: white;
+  }
+  nav #check:checked ~ ul li a:hover {
+    color: #086AD8;
   }
   nav #check:checked ~ ul .search {
     display: block;
-    margin: 2rem 5rem 0 8rem;
+    margin: 2rem 5rem 0 5rem;
+    color: white;
+  }
+  nav #check:checked ~ ul .search:hover {
+    color: #086AD8;
   }
   nav #check:checked ~ .checkbtn .fa-bars::before {
     content: "\f00d";
@@ -677,6 +709,12 @@ section .services .services-details .service-box a {
     margin-right: 1.2rem;
     -webkit-transition-duration: .8s;
             transition-duration: .8s;
+  }
+  .button-up {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 5%;
   }
   .main-part {
     display: -webkit-box;

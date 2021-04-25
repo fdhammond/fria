@@ -89,6 +89,23 @@ nav {
     }
 }
 
+.button-up {
+    scroll-behavior: smooth;
+    position: fixed;
+    display: none;
+    justify-content: flex-end;
+    align-content: center;
+    left: 90%;
+    bottom: 5%;
+    color: black;
+    i {        
+        border: 2px solid $green-color;
+        border-radius: 50%;
+        padding: 12px 12px;
+        text-align: center;
+    }
+}
+
 //Main
 
 main {    
@@ -451,7 +468,6 @@ main {
     nav {  
         padding-bottom: 0;       
         margin-bottom: 0;
-        
         .checkbtn {
             display: flex;
             justify-content: center;
@@ -484,12 +500,12 @@ main {
             &:checked ~ ul {
                 display: block;                
                 //background-color: violet;
-                background-color: greenyellow;
-                top: 0;                                
-                padding: 0 0 25px 0;
-                margin: 0 auto;
-                .item{
-                
+                background-color: $green-color;
+                top: 0;     
+                width: 100%;                           
+                text-align: center;
+                margin-top: 12px;
+                .item{                
                     &:first-child {
                         padding-top: 2rem;
                         margin-top: 12px;
@@ -497,11 +513,21 @@ main {
                 }
                 li{
                     display: block;
-                    margin: 2rem 5rem 0 8rem;                                                            
+                    margin: 2rem 5rem 0 5rem;  
+                    a {
+                        color: white;
+                        &:hover {
+                            color: $blue-color;
+                        }
+                    }                                                          
                 }
                 .search {
                     display: block;
-                    margin: 2rem 5rem 0 8rem;  
+                    margin: 2rem 5rem 0 5rem;
+                    color: white; 
+                    &:hover {
+                        color: $blue-color;
+                    } 
                 }
                 
             }
@@ -513,6 +539,12 @@ main {
                 transition-duration: .8s;
             }
         }         
+    }
+
+    //ButtonBackToTop
+    .button-up {
+        display: flex;
+        right: 5%;
     }
 
     //Main text

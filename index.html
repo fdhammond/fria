@@ -9,6 +9,7 @@
     <title>Fria</title>
 </head>
 <body>
+    
     <header>
 
         <nav>
@@ -24,7 +25,7 @@
                     <a href="#">Home</a>
                    </li>
                 <li class="item">
-                    <a href="#">About</a>
+                    <a href="#features">About</a>
                     </li>
                 <li class="item">
                     <a href="#">Services</a>
@@ -48,7 +49,9 @@
         </nav>
 
     </header>
-
+    <div class="button-up">
+        <i class="fas fa-arrow-up"></i>
+    </div>
     <main>
         <div class="main-part">            
             <div class="main-text">
@@ -69,7 +72,7 @@
     </main>
 
 <section>
-    <div class="features">
+    <div class="features" id="features">
         <div class="features-title">
             <h1>Creative Features</h1>
             <div class="features-paragraph">
@@ -231,7 +234,15 @@
 </div>
 </section>   -->
 <script>
-  
+    const buttonSelector = document.querySelector('.button-up');
+    function scrollTop() {
+        const rootElement = document.documentElement;
+        rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+    buttonSelector.addEventListener("click", scrollTop);
 </script>
 </body>
 </html>
